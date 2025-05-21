@@ -22,15 +22,10 @@ namespace BankProject
     {
         public static void Main(String[] args)
         {
-
-
             List<Customer> customerList = new List<Customer>();
             int Next = 0;
             do
             {
-               
-
-
                 Console.WriteLine(" Press 1 for Create Account");
                 Console.WriteLine(" Press 2 for Withdraw Amount");
                 Console.WriteLine(" Press 3 for Deposit Amount");
@@ -71,8 +66,6 @@ namespace BankProject
             } while (Next == 7);
         }
 
-        
-
         //This is a CreateCustomer function
         public static void CreateCustomer(List<Customer> customerList)
         {
@@ -100,7 +93,6 @@ namespace BankProject
         //This is a WithdrawAmount function
         public static void WithdrawAmount(List<Customer> customerList)
         {
-
             int withdraw = 0;
             string custid = " ";
             Console.WriteLine("Enter Withdraw Your Amount");
@@ -196,21 +188,14 @@ namespace BankProject
                 {
                     Console.WriteLine("Server TimeOut");
                 }
-
-
-
             }
-
-
         }
 
         private static bool validatePassword(Customer customer, string newpassword)
         {
-
             if (customer.Password != newpassword)
             {
                 Console.WriteLine("Your Password has been changed successfully");
-
                 return true;
             }
             else
@@ -224,7 +209,6 @@ namespace BankProject
         {
             double principal;
             int term;
-
             Console.WriteLine("Enter your loan amount");
             principal = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter term period");
@@ -240,7 +224,7 @@ namespace BankProject
            double maturityAmount = principal * Math.Pow((1 + rate / 100), term);
            double FDinterest = maturityAmount - principal;
            Console.WriteLine("For a fixed deposit of $" + principal + " at " + rate + "% interest for " + term + " month, the interest amount is $" + interest + ".");
-            }
+        }
 
 
         public static void carLoan(double monthlySalary, double monthlyExpenses, int loanTerm)
@@ -250,10 +234,7 @@ namespace BankProject
             double loanAmount = (maxEMI / monthlyRate) * (1 - Math.Pow(1 + monthlyRate, -loanTerm));
             Console.WriteLine("Based on a monthly salary of $" + monthlySalary + " and monthly expenses of $" + monthlyExpenses + ", you may qualify for a car loan of up to $" + loanAmount + " for a loan term of " + loanTerm + " months.");
         }
-
     }
-
-
 }
 
 
